@@ -3,19 +3,21 @@
 
 ## Setup
 Download or clone the repo on your Raspberry Pi. We need Hugin and enblend to create the 360 pictures.
+[make this better and more automated]
 
 #### Install script (recommended)
 Run `bash ./installer.sh` to grab these dependencies, create the proper folder structure, and move the scripts to the predefined location. `run-timelapse.sh`, `stitch-pictures.sh`, `take-pictures.py` and `template.pto` will be moved to `/home/pi/Documents/Time-Lapse Software`. All Time-lapses that you take will be saved in `/home/pi/Time-Lapses`. 
 
 
 #### Manual installation
+
 *Use this if  the installer does not work.*
 Open your browser on the Pi and navigate to: [https://packages.debian.org/jessie/hugin-tools](https://packages.debian.org/jessie/hugin-tools). This page is the repository for Hugin tools in Debian. Scroll down to the bottom and choose armhf. Pick your region and favorite downloader. I used the ftp.us.debian.org/debian link without issue. When it finishes, launch the installer. Next run `sudo apt-get install enblend`
 
 Create rename and move this repo to `/home/pi/Documents/Time-Lapse Software`. Finally create the needed folder `/home/pi/Time-Lapses` to store your timelapses.
 
 ## Pi Requirements
-
+[Note details is here of the arducam multiplexor as the official site seems to lack the detail required for those learning the this area]
 This program assumes you have [Arducam's camera splitter](arducam.com/multi-camera-adapter-module-raspberry-pi/) attached to your Pi with all 4 cameras connected. The number of cameras is scalable by changing the `take-pictures.py` file. Documentation on how to change number of cameras can be found at Arducam's website.
 
 ## How to use
